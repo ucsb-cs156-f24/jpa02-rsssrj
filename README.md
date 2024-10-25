@@ -2,7 +2,7 @@
 
 Repo: [https://ucsb-cs156-f24/jpa02-rsssrj](https://github.com/ucsb-cs156-f24/jpa02-rsssrj)
 
-Deployed at: [https://jpa02-replace-me.dokku-12.cs.ucsb.edu](https://jpa02-rsssrj.dokku-12.cs.ucsb.edu)
+Deployed at: [https://jpa02-rsssrj.dokku-12.cs.ucsb.edu](https://jpa02-rsssrj.dokku-12.cs.ucsb.edu)
 
 
 # About this repo
