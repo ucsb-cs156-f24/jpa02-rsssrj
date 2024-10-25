@@ -4,16 +4,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-// import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class TeamTest {
 
     Team team;
 
+    @BeforeEach
+    public void setUp() {
+        team = new Team("f24-12");
+    }
+
     @Test
     public void getName_returns_correct_name() {
-       assert(team.getName().equals("f24-12"));
+        assertEquals("f24-12", team.getName());
     }
 
     @Test
@@ -73,5 +78,3 @@ public class TeamTest {
     }    
 
 }
-
-
