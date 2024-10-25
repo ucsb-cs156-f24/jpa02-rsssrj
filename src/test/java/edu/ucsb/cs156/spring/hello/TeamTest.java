@@ -33,7 +33,7 @@ public class TeamTest {
 
     @Test
     public void testEquals_differentClass() {
-        assertFalse(team.equals(1));
+        assertFalse(team.equals("team"));
     }
 
     @Test
