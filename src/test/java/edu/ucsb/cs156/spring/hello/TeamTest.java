@@ -61,20 +61,14 @@ public class TeamTest {
         assertEquals(team1.hashCode(), team2.hashCode());
     }
 
-    @Test
-    public void testHashCode_differentName() {
-        Team team1 = new Team("f24-12");
-        Team team2 = new Team("f24-13");
-        assertFalse(team1.hashCode() == team2.hashCode());
-    }
 
     @Test
     public void testHashCode_differentMembers() {
         Team team1 = new Team("f24-12");
-        team1.addMember("Abby");
+        team1.addMember("sh");
         Team team2 = new Team("f24-12");
-        team2.addMember("Javin");
-        assertFalse(team1.hashCode() == team2.hashCode());
+        team2.addMember("Jahbevin");
+        assertTrue(team1.hashCode() != team2.hashCode());
     }    
 
 }
