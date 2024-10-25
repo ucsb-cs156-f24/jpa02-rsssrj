@@ -25,10 +25,15 @@ public class TeamTest {
     public void toString_returns_correct_string() {
         assertEquals("Team(name=f24-12, members=[])", team.toString());
     }
-    
+
     @Test
     public void testEquals_sameObject() {
         assertTrue(team.equals(team));
+    }
+
+    @Test
+    public void testEquals_differentClass() {
+        assertFalse(team.equals(1));
     }
 
     @Test
@@ -48,27 +53,34 @@ public class TeamTest {
     @Test
     public void testEquals_differentMembers() {
         Team team1 = new Team("f24-12");
-        team1.addMember("Abby");
+        team1.addMember("member1");
         Team team2 = new Team("f24-12");
-        team2.addMember("Javin");
+        team2.addMember("member2");
         assertFalse(team1.equals(team2));
     }
 
     @Test
     public void testHashCode_sameNameAndMembers() {
-        Team team1 = new Team("f24-12");
-        Team team2 = new Team("f24-12");
+        Team team1 = new Team("person");
+        team1.addMember("something");
+        Team team2 = new Team("person");
+        team2.addMember("something");
         assertEquals(team1.hashCode(), team2.hashCode());
     }
-
 
     @Test
     public void testHashCode_differentMembers() {
         Team team1 = new Team("f24-12");
-        team1.addMember("sh");
+        team1.addMember("member1");
         Team team2 = new Team("f24-12");
-        team2.addMember("Jahbevin");
+        team2.addMember("member2");
         assertTrue(team1.hashCode() != team2.hashCode());
-    }    
+    }
 
+    @Test
+    public void testHashCode_specificHashValue() {
+        int result = team.hashCode();
+        int expectedResult = -1327023897;
+        assertEquals(expectedResult, result);
+    }
 }
